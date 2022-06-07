@@ -1,6 +1,7 @@
 import { View, Text } from "react-native"
 import { sizeProp } from "./TypesResource"
 
+// CardFooter => footer de la Card
 export default function CardFooter({ prodSize }: sizeProp) {
     return (
         <View>

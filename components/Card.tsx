@@ -5,12 +5,13 @@ import { useState } from "react"
 import { itemProp, searchProp } from "./TypesResource"
 import PRODUITS from "./data"
 
-
+// Card => composant qui récupère les données à afficher et les affiche
 export default function Card({ searchedProduct }: searchProp) {
 
     const [modalVisible, setModalVisible] = useState(false)
-    const [index, setIndex] = useState(0)
+    const [index, setIndex] = useState(0) // => permet de retoruver la position de l'élément à afficher
 
+    // renderItem => code renvoyer par la FlatList
     const renderItem = ({ item }: itemProp) => (
         <TouchableOpacity
             style={styles.cardStyle}

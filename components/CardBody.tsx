@@ -3,6 +3,7 @@ import { StyleSheet, View, Text, Image } from "react-native"
 import LikeBtn from "./LikeBtn"
 import CardFooter from "./CardFooter"
 
+// CardBody => composant qui permet de construire le body pour chaque Card
 export default function CardBody({ prod }: cardProp) {
     return (
         <View style={styles.container}>

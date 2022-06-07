@@ -1,8 +1,9 @@
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { Text, StyleSheet, TouchableOpacity } from "react-native"
 import { likeProp } from "./TypesResource"
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons"
 
+// LikeBtn => Bouton like qui est appelé dans le composant CardBody
 export default function LikeBtn({ prodLikes }: likeProp) {
 
     if (prodLikes.likes >= 0) {

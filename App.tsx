@@ -13,17 +13,20 @@ export default function App() {
   const [search, setSearch] = useState("")
   const [btn, setBtn] = useState("search")
 
+  // newDatas => construction du tabelau avec les éléments correspondants à la recherche
   const newDatas: Array<productsProp> = PRODUITS.filter((item: productsProp) => {
     if (search === "" || item.title.toLowerCase().includes(search.toLowerCase()) || item.brand.toLowerCase().includes(search.toLowerCase())) {
       return item
     }
   })
 
+  // changeBtn => permet de changer de bouton dans la barre de de recherche
   const changeBtn = (text: string) => {
     setSearch(text);
     (text !== "") ? setBtn("close") : setBtn("search")
   }
 
+  // erase => permet d'annuler la recherche
   const erase = () => {
     if (btn == "close") {
       setSearch("");
